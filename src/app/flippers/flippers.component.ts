@@ -1,16 +1,15 @@
-import { 
-	Component,
-	//Input,
+import { Component } from '@angular/core';
+import {
   	trigger,
   	state,
   	style,
   	animate,
   	transition
-} from '@angular/core';
+  } from '@angular/animations';
 
 /*import { Flipper } from './flippers.service'*/
-import { Flipper } from './flippers'
-import { mockJobs } from './flippers.mock-jobs'
+import { Flipper } from './flippers';
+import { mockJobs } from './flippers.mock-jobs';
 
 @Component({
 	selector: 'flippers',
@@ -65,6 +64,5 @@ export class FlippersComponent{
 	
 	constructor(){
 		this.flippersArray = mockJobs.map(job => new Flipper(job));
-		this
 	}
 }

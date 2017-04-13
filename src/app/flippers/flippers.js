@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Flipper = (function () {
     function Flipper(job) {
         this.frontState = 'visible';
@@ -25,31 +26,24 @@ var Flipper = (function () {
     return Flipper;
 }());
 exports.Flipper = Flipper;
-var Category = (function () {
-    function Category(type) {
-        this.name = type.name;
-        this.subGroups = type.subGroups;
-    }
-    return Category;
-}());
-exports.Category = Category;
-var Job = (function () {
-    function Job(type) {
+var Experience = (function () {
+    function Experience(type) {
         this.name = type.name;
         this.role = type.role;
         this.startDate = type.startDate;
         this.endDate = type.endDate;
         this.logoURL = type.logoURL;
         this.symbolURL = type.symbolURL;
+        //this.subGroups = type.subGroups.map()
     }
-    return Job;
+    return Experience;
 }());
-exports.Job = Job;
-var JobDetail = (function () {
-    function JobDetail(type) {
+exports.Experience = Experience;
+var ExperienceDetail = (function () {
+    function ExperienceDetail(type) {
         this.detail = type.detail;
     }
-    return JobDetail;
+    return ExperienceDetail;
 }());
-exports.JobDetail = JobDetail;
+exports.ExperienceDetail = ExperienceDetail;
 //# sourceMappingURL=flippers.js.map

@@ -65,6 +65,7 @@ export class Experience{
 		this.endDate = type.endDate;
 		this.logoURL = type.logoURL;
 		this.symbolURL = type.symbolURL;
+		//this.subGroups = type.subGroups.map()
 	}
 }
 

@@ -41,20 +41,7 @@ export class Flipper{
 	}
 }
 
-export class Category{
-	name: string;
-	subGroups: Array<Object>;
-
-	constructor(type: {
-		name: string,
-		subGroups: Array<Object>
-	}){
-		this.name = type.name;
-		this.subGroups = type.subGroups;
-	}
-}
-
-export class Job{
+export class Experience{
 	name: string;
 	role: string;
 	startDate: string;
@@ -81,7 +68,7 @@ export class Job{
 	}
 }
 
-export class JobDetail{
+export class ExperienceDetail{
 	detail: string;
 
 	constructor(type: {

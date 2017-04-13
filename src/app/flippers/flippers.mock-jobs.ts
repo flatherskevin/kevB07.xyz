@@ -23,47 +23,41 @@ export const mockJobs: any[] = [
 
 export const mockJobsJSON: any[] = [
 	{
-		'name': 'Experience',
+		'name': 'Schneider Electric',
+		'role': 'System Application Engineer',
+		'startDate': 'Aug. 2016',
+		'endDate': 'Present',
+		'logoURL': './img/schneider_logo.png',
+		'symbolURL': './img/schneider_symbol.svg',
 		'subGroups': [
 			{
-				'name': 'Schneider Electric',
-				'role': 'System Application Engineer',
-				'startDate': 'Aug. 2016',
-				'endDate': 'Present',
-				'logoURL': './img/schneider_logo.png',
-				'symbolURL': './img/schneider_symbol.svg',
-				'subGroups': [
-					{
-						'detail': 'Used JavaScript to create hundreds of fully dynamic Building Management System graphics'
-					},
-					{
-						'detail': 'Programmed Building Management System HVAC units using SE Script'
-					},
-					{
-						'detail': 'Used Adobe Illustrator to create custom graphics components'
-					}
-				]
+				'detail': 'Used JavaScript to create hundreds of fully dynamic Building Management System graphics'
 			},
 			{
-				'name': 'Triumph Aerostructures',
-				'role': 'Planning Engineer Intern',
-				'startDate': 'Sept. 2014',
-				'endDate': 'Apr. 2016',
-				'logoURL': './img/triumph_logo.png',
-				'symbolURL': './img/triumph_symbol.svg',
-				'subGroups': [
-					{
-						'detail': 'Used VBScript to automate manual entry processes'
-					},
-					{
-						'detail': 'Created instruction booklets for assembling aircraft wing structures'
-					},
-					{
-						'detail': 'Worked on various Airbus, Gulstream, Bombardier, and Lockheed Martin aircraft models'
-					}
-				]
+				'detail': 'Programmed Building Management System HVAC units using SE Script'
+			},
+			{
+				'detail': 'Used Adobe Illustrator to create custom graphics components'
 			}
 		]
-
+	},
+	{
+		'name': 'Triumph Aerostructures',
+		'role': 'Planning Engineer Intern',
+		'startDate': 'Sept. 2014',
+		'endDate': 'Apr. 2016',
+		'logoURL': './img/triumph_logo.png',
+		'symbolURL': './img/triumph_symbol.svg',
+		'subGroups': [
+			{
+				'detail': 'Used VBScript to automate manual entry processes'
+			},
+			{
+				'detail': 'Created instruction booklets for assembling aircraft wing structures'
+			},
+			{
+				'detail': 'Worked on various Airbus, Gulstream, Bombardier, and Lockheed Martin aircraft models'
+			}
+		]
 	}
 ]

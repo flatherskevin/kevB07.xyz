@@ -1,0 +1,63 @@
+.flipper-main-container{
+	overflow-y: hidden;
+}
+
+
+/*
+Custom CSS here
+*/
+
+.flipper-container{
+	height: 20em;
+	width: 95%;
+	position: relative;
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	line-height: 2em;
+	font-size: 1em;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 900;
+	font-style: bold;
+	user-select: none;
+
+}
+
+.flipper-container > .flipper-content{
+	border-width: .2em;
+	border-style: solid;
+	border-color: #808080;
+	border-radius: .2em;
+}
+	
+.flipper-container > .flipper-front{
+	background-color: #606060;
+	color: #FAFAFA;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.flipper-container > .flipper-back{
+	background-color: #FAFAFA;
+	color: #404040;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.flipper-container > .flipper-back > .flipper-backArrow{
+	position: absolute;
+	font-size: 24px;
+	top: 1%;
+	left: 1%;
+	color: #808080;
+	border-radius: .1em;
+}

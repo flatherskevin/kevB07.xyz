@@ -1,0 +1,28 @@
+<div class="flipper-main-container container-fluid">
+	<div class="row-fluid">
+		<div *ngFor="let flip of flippersArray" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+			<div class= "flipper-container">
+				<div class="flipper-back flipper-content"
+				(@flipperBackState.done)="flip.setIsRunningOff()"
+				[@flipperBackState]="flip.backState">
+					<div (click)="flip.setFlipState('visible', 'hidden')"
+					(mouseenter)="flip.mouseHover('mouseIn')"
+					(mouseleave)="flip.mouseHover('mouseOut')"
+					(mousedown)="flip.mouseHover('mouseDown')"
+					(mouseup)="flip.mouseHover('mouseOut')"
+					[@backArrow]="flip.mouseState"
+					class="flipper-backArrow glyphicon glyphicon-share-alt"></div>
+					<div class="flipper-category">Graphics</div>
+				</div>
+				<div class="flipper-front flipper-content"
+				(click)="flip.setFlipState('hidden', 'visible')"
+				(@flipperFrontState.done)="flip.setIsRunningOff()"
+				[@flipperFrontState]="flip.frontState">
+					<div class="flipper-jobTitle">{{flip.jobTitle}}</div>
+					<div class="flipper-company">{{flip.company}}</div>
+					<div class="flipper-dates">{{flip.dates}}</div>
+				</div>
+			</div>
+			</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+.kDesign-button{
+	height: 2em;
+	width: 6em;
+	position: relative;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	line-height: 2em;
+	font-size: 1em;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+	font-style: bold;
+	color: #808080;
+	background-color: #FAFAFA;
+	border-width: .2em;
+	border-style: solid;
+	border-color: #808080;
+	border-radius: .2em;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.kDesign-button:hover{
+	background-color: #E0E0E0;
+}
+
+.kDesign-button:active{
+	background-color: #C0C0C0;
+}

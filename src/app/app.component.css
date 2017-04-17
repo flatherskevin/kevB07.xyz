@@ -1,0 +1,7 @@
+.app-container{
+	width: 100%;
+	position: absolute;
+	top: 4em;
+	left: 0;
+	overflow-y: auto;
+}

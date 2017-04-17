@@ -1,0 +1,9 @@
+<div class="navi-container">
+	<div class="navi-logo">
+		<img src="./app/navi/img/kevB07-logo.svg"/>
+	</div>
+	<a *ngFor="let button of buttons" class="navi-button" href="{{button.link}}">
+			<div class="navi-button-text">{{button.text}}</div>
+			<div class="navi-button-bar"></div>
+	</a>
+</div>

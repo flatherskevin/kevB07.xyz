@@ -63,6 +63,6 @@ export class FlippersComponent{
 	
 	
 	constructor(){
-		this.flippersArray = mockJobs.map(job => new Flipper(job));
+		this.flippersArray = mockJobs.map(obj => new Flipper(obj));
 	}
 }

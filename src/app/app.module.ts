@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { AppComponent }  from './app.component';
 import { FlippersComponent } from './flippers/flippers.component';
+import { NaviComponent } from './navi/navi.component';
 
 @NgModule({
 	imports:[
@@ -17,7 +18,8 @@ import { FlippersComponent } from './flippers/flippers.component';
 	],
 	declarations:[
 		AppComponent,
-		FlippersComponent
+		FlippersComponent,
+		NaviComponent
 	],
 	bootstrap:[ AppComponent ]
 })

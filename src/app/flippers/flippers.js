@@ -1,14 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var Experience = (function () {
+    function Experience(type) {
+        this.name = type.name;
+        this.role = type.role;
+        this.startDate = type.startDate;
+        this.endDate = type.endDate;
+        this.logoURL = type.logoURL;
+        this.symbolURL = type.symbolURL;
+        this.subGroups = type.subGroups.map(function (obj) { return new ExperienceDetail(obj); });
+    }
+    return Experience;
+}());
+var ExperienceDetail = (function () {
+    function ExperienceDetail(type) {
+        this.detail = type.detail;
+    }
+    return ExperienceDetail;
+}());
 var Flipper = (function () {
-    function Flipper(job) {
+    function Flipper(experience) {
         this.frontState = 'visible';
         this.backState = 'hidden';
         this.mouseState = 'mouseOut';
         this.isRunning = 0;
-        this.company = job.company;
-        this.jobTitle = job.jobTitle;
-        this.dates = job.dates;
+        this.experience = new Experience(experience);
     }
     Flipper.prototype.setFlipState = function (stateFront, stateBack) {
         if (!this.isRunning) {
@@ -26,24 +42,4 @@ var Flipper = (function () {
     return Flipper;
 }());
 exports.Flipper = Flipper;
-var Experience = (function () {
-    function Experience(type) {
-        this.name = type.name;
-        this.role = type.role;
-        this.startDate = type.startDate;
-        this.endDate = type.endDate;
-        this.logoURL = type.logoURL;
-        this.symbolURL = type.symbolURL;
-        //this.subGroups = type.subGroups.map()
-    }
-    return Experience;
-}());
-exports.Experience = Experience;
-var ExperienceDetail = (function () {
-    function ExperienceDetail(type) {
-        this.detail = type.detail;
-    }
-    return ExperienceDetail;
-}());
-exports.ExperienceDetail = ExperienceDetail;
 //# sourceMappingURL=flippers.js.map

@@ -1,3 +1,40 @@
+class Experience{
+	name: string;
+	role: string;
+	startDate: string;
+	endDate: string;
+	logoURL: string;
+	symbolURL: string;
+	subGroups: Array<any>;
+
+	constructor(type: {
+		name: string,
+		role: string,
+		startDate: string,
+		endDate: string,
+		logoURL: string,
+		symbolURL: string,
+		subGroups: Array<any>
+	}){
+		this.name = type.name;
+		this.role = type.role;
+		this.startDate = type.startDate;
+		this.endDate = type.endDate;
+		this.logoURL = type.logoURL;
+		this.symbolURL = type.symbolURL;
+		this.subGroups = type.subGroups.map(obj => new ExperienceDetail(obj));
+	}
+}
+
+class ExperienceDetail{
+	detail: string;
+
+	constructor(type: {
+		detail: string
+	}){
+		this.detail = type.detail;
+	}
+}
 
 
 export class Flipper{
@@ -5,22 +42,10 @@ export class Flipper{
 	backState: string = 'hidden';
 	mouseState: string = 'mouseOut';
 	isRunning: Number = 0;
-
-	//Flipper job properties
-	company: string;
-	jobTitle: string;
-	dates: string;
-
-
-	constructor(job: {
-		company: string,
-		jobTitle: string,
-		dates: string
-
-	}){
-		this.company = job.company;
-		this.jobTitle = job.jobTitle;
-		this.dates = job.dates;
+	experience: any;	
+	
+	constructor(experience: any){
+		this.experience = new Experience(experience);
 	}
 
 
@@ -38,43 +63,5 @@ export class Flipper{
 
 	mouseHover(mouseState: string){
 		this.mouseState = mouseState;
-	}
-}
-
-export class Experience{
-	name: string;
-	role: string;
-	startDate: string;
-	endDate: string;
-	logoURL: string;
-	symbolURL: string;
-	subGroups: Array<Object>;
-
-	constructor(type: {
-		name: string,
-		role: string,
-		startDate: string,
-		endDate: string,
-		logoURL: string,
-		symbolURL: string,
-		subGroups: Array<Object>
-	}){
-		this.name = type.name;
-		this.role = type.role;
-		this.startDate = type.startDate;
-		this.endDate = type.endDate;
-		this.logoURL = type.logoURL;
-		this.symbolURL = type.symbolURL;
-		//this.subGroups = type.subGroups.map()
-	}
-}
-
-export class ExperienceDetail{
-	detail: string;
-
-	constructor(type: {
-		detail: string,
-	}){
-		this.detail = type.detail;
 	}
 }

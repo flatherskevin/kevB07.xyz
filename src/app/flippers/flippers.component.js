@@ -16,7 +16,7 @@ var flippers_1 = require("./flippers");
 var flippers_mock_jobs_1 = require("./flippers.mock-jobs");
 var FlippersComponent = (function () {
     function FlippersComponent() {
-        this.flippersArray = flippers_mock_jobs_1.mockJobs.map(function (job) { return new flippers_1.Flipper(job); });
+        this.flippersArray = flippers_mock_jobs_1.mockJobs.map(function (obj) { return new flippers_1.Flipper(obj); });
     }
     return FlippersComponent;
 }());

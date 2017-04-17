@@ -13,6 +13,7 @@ var http_1 = require("@angular/http");
 var animations_1 = require("@angular/platform-browser/animations");
 var app_component_1 = require("./app.component");
 var flippers_component_1 = require("./flippers/flippers.component");
+var navi_component_1 = require("./navi/navi.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +29,8 @@ AppModule = __decorate([
         ],
         declarations: [
             app_component_1.AppComponent,
-            flippers_component_1.FlippersComponent
+            flippers_component_1.FlippersComponent,
+            navi_component_1.NaviComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })

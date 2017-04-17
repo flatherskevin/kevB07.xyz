@@ -1,6 +1,6 @@
 <div class="flipper-main-container container-fluid">
 	<div class="row-fluid">
-		<div *ngFor="let flip of flippersArray" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+		<div *ngFor="let flip of flippersArray" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 			<div class= "flipper-container">
 				<div class="flipper-back flipper-content"
 				(@flipperBackState.done)="flip.setIsRunningOff()"
@@ -12,15 +12,24 @@
 					(mouseup)="flip.mouseHover('mouseOut')"
 					[@backArrow]="flip.mouseState"
 					class="flipper-backArrow glyphicon glyphicon-share-alt"></div>
-					<div class="flipper-category">Graphics</div>
+					<div class="flipper-role">{{flip.experience.role}}</div>
+					<table class="flipper-detail-container">
+						<tr *ngFor="let subGroup of flip.experience.subGroups" class="flipper-detail-row">
+							<td class="flipper-symbol-cell">
+								<img class="flipper-symbol" [src]="flip.experience.symbolURL"/>
+							</td>
+							<td class="flipper-detail">{{subGroup.detail}}</td>
+						</tr>
+					</table>
 				</div>
 				<div class="flipper-front flipper-content"
 				(click)="flip.setFlipState('hidden', 'visible')"
 				(@flipperFrontState.done)="flip.setIsRunningOff()"
 				[@flipperFrontState]="flip.frontState">
-					<div class="flipper-jobTitle">{{flip.jobTitle}}</div>
-					<div class="flipper-company">{{flip.company}}</div>
-					<div class="flipper-dates">{{flip.dates}}</div>
+					<div class="flipper-role">{{flip.experience.role}}</div>
+					<div class="flipper-name">{{flip.experience.name}}</div>
+					<div class="flipper-dates">({{flip.experience.startDate}} - {{flip.experience.endDate}})</div>
+					<img class="flipper-logo" [src]="flip.experience.logoURL"/>
 				</div>
 			</div>
 			</div>

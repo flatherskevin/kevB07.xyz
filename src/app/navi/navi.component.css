@@ -1,0 +1,16 @@
+.navi-container{
+	height: 4em;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.navi-logo > img{
+	height: 4em;
+
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 5em;
+}

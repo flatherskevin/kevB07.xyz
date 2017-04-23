@@ -2,8 +2,13 @@
 	<div class="navi-logo">
 		<img src="./app/navi/img/kevB07-logo.svg"/>
 	</div>
-	<a *ngFor="let button of buttons" class="navi-button" href="{{button.link}}">
+	<div class="navi-button-container">
+		<a *ngFor="let button of buttons" class="navi-button" href="{{button.link}}"
+		(mouseenter)="button.mouseHover('mouseIn')"
+		(mouseleave)="button.mouseHover('mouseOut')">
 			<div class="navi-button-text">{{button.text}}</div>
-			<div class="navi-button-bar"></div>
-	</a>
+			<div class="navi-button-bar"
+			[@hoverState]="button.mouseState"></div>
+		</a>
+	</div>
 </div>

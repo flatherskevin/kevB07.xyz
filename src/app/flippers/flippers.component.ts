@@ -28,7 +28,7 @@ import { mockJobs } from './flippers.mock-jobs';
 			]),
 			transition('visible => hidden', [
 				animate('.5s ease-in')
-			]),
+			])
 		]),
 		trigger('flipperBackState', [
 			state('visible', style({
@@ -42,7 +42,7 @@ import { mockJobs } from './flippers.mock-jobs';
 			]),
 			transition('visible => hidden', [
 				animate('.35s ease-in')
-			]),
+			])
 		]),
 		trigger('backArrow', [
 			state('mouseIn', style({

@@ -38,7 +38,7 @@ FlippersComponent = __decorate([
                 ]),
                 animations_1.transition('visible => hidden', [
                     animations_1.animate('.5s ease-in')
-                ]),
+                ])
             ]),
             animations_1.trigger('flipperBackState', [
                 animations_1.state('visible', animations_1.style({
@@ -52,7 +52,7 @@ FlippersComponent = __decorate([
                 ]),
                 animations_1.transition('visible => hidden', [
                     animations_1.animate('.35s ease-in')
-                ]),
+                ])
             ]),
             animations_1.trigger('backArrow', [
                 animations_1.state('mouseIn', animations_1.style({

@@ -10,18 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var animations_1 = require("@angular/animations");
+var navi_1 = require("./navi");
+var navi_2 = require("./navi");
 var NaviComponent = (function () {
     function NaviComponent() {
-        this.buttons = [
-            {
-                'text': 'About',
-                'link': ''
-            },
-            {
-                'text': 'Contact',
-                'link': ''
-            }
-        ];
+        this.buttons = navi_2.naviButtons.map(function (obj) { return new navi_1.NaviButton(obj); });
     }
     return NaviComponent;
 }());
@@ -31,7 +25,20 @@ NaviComponent = __decorate([
         styleUrls: [
             './navi.component.css'
         ],
-        templateUrl: './navi.component.html'
+        templateUrl: './navi.component.html',
+        animations: [
+            animations_1.trigger('hoverState', [
+                animations_1.state('mouseIn', animations_1.style({
+                    width: '100%'
+                })),
+                animations_1.state('mouseOut', animations_1.style({
+                    width: '0%'
+                })),
+                animations_1.transition('mouseIn <=> mouseOut', [
+                    animations_1.animate('.2s ease-out')
+                ])
+            ])
+        ]
     }),
     __metadata("design:paramtypes", [])
 ], NaviComponent);

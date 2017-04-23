@@ -1,5 +1,5 @@
 .navi-container{
-	height: 4em;
+	height: 5em;
 	width: 100%;
 	position: absolute;
 	top: 0;
@@ -7,10 +7,51 @@
 }
 
 .navi-logo > img{
-	height: 4em;
-
+	height: 5em;
 	position: relative;
 	top: 0;
 	bottom: 0;
 	left: 5em;
+}
+
+.navi-button{
+	height: 100%;
+	width: 7em;
+	position: relative;
+	float: right;
+	margin-top: 1.25em;
+	margin-right: 2em;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+.navi-button-container{
+	height: 100%;
+	width: 75%;
+	position: absolute;
+	top: 0;
+	right: 5em;
+}
+
+.navi-button-text{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	margin: auto;
+	line-height: 3em;
+	font-size: 1.5em;
+	color: #404040;
+}
+
+.navi-button-bar{
+	height: 0.1em;
+	width: 0%;
+	background-color: #404040;
+	position: absolute;
+	bottom: 1.25em;
+	right: 0;
+	left: 0;
+	margin: auto;
 }
